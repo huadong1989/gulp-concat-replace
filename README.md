@@ -1,6 +1,6 @@
 # gulp-concat-replace [![NPM version][npm-image]][npm-url]
 
-> Replace build blocks with js or css contact in HTML. Like useref but done right.
+> Concat(js and css) and Replace build blocks in HTML. Like useref but done right.
  
 
 ### Table of Contents
