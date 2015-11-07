@@ -45,7 +45,7 @@ Type: `object`
 - {String} **prefix** - 合并和文件名的前缀，默认值："concat".
 - {Object} **output** - 合并后文件的存储路径，包括css和js的路径（相对于gulpfile.js文件）.默认值：
 ```json
-{js:"./tmp/js",css:"./tmp/css"}
+{"js":"./tmp/js","css":"./tmp/css"}
 ```
 
 ## Example
@@ -119,7 +119,7 @@ Result:
 
 ## 感谢
 
-本插件参考了gulp-html-replace，所以需要感谢Vladimir Kucherenko，提供了gulp-html-replace
+本插件参考了gulp-html-replace，所以需要感谢Vladimir Kucherenko提供了gulp-html-replace
 
 [npm-url]: https://npmjs.org/package/gulp-html-replace
 [npm-image]: http://img.shields.io/npm/v/gulp-html-replace.svg
