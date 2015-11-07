@@ -1,5 +1,5 @@
 {
-  "name": "gulp-build-replace",
+  "name": "gulp-concat-replace",
   "version": "1.0.0",
   "description": "Replace build blocks with js or css contact in HTML. Like useref but done right.",
   "main": "./lib/index.js",
