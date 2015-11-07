@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huadong1989/gulp-concat-replace.git"
+  },
   "keywords": [
     "gulpplugin",
     "html",
