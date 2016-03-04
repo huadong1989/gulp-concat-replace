@@ -25,7 +25,7 @@ Put some blocks in your HTML file:
 <script src="./xxx2.js" type="text/javascript"></script>
 <!-- endbuild -->
 
-or 
+or
 
 <!-- build:name -->
 <link rel="stylesheet" type="text/css" href="./xxx.css">
@@ -43,6 +43,7 @@ or
 Type: `object`
 
 - {String} **prefix** - 合并和文件名的前缀，默认值："concat".
+- {String} **base** - 如果页面引入路径是以“/”开始，相对应于gulpfile.js目录，默认“../”.
 - {Object} **output** - 合并后文件的存储路径，包括css和js的路径（相对于gulpfile.js文件）.默认值：
 ```json
 {"js":"./tmp/js","css":"./tmp/css"}
@@ -57,17 +58,17 @@ index.html:
     <head>
 
     <!-- build:css -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
     </head>
     <body>
 
     <!-- build:js -->
-    <script src="js/player.js"></script>
-    <script src="js/monster.js"></script>
-    <script src="js/world.js"></script>
+    <script src="/js/player.js"></script>
+    <script src="/js/monster.js"></script>
+    <script src="/js/world.js"></script>
     <!-- endbuild -->
 ```
 
@@ -81,6 +82,7 @@ gulp.task('default', function() {
   gulp.src('index.html')
     .pipe(concatreplace({
     	prefix:"concat",
+        base:"../",
         output:{
         	css:"./build/css",
             js:"./build/js"
@@ -123,4 +125,3 @@ Result:
 
 [npm-url]: https://npmjs.org/package/gulp-html-replace
 [npm-image]: http://img.shields.io/npm/v/gulp-html-replace.svg
-
